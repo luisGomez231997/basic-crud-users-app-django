@@ -32,6 +32,8 @@ App settings to local startup:
 11. execute command: python manage.py runserver.
 12. Open the url path displayed in the terminal console.
 
+Note: To advanced python users read the Pipfile and use the command in scripts.
+
 App settings to containers startup:
 
 1. using shell command go to inside of project folder dir in the same level of Dockerfile file and execute the command: docker-compose up.
