@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+python-decouple = "*"
+drf-yasg = "*"
+pillow = "*"
+pymysql = "*"
+whitenoise = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+install = "*"
+cloudinary = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+makemigrations = "python3 manage.py makemigrations"
+migrate = "python3 manage.py migrate"
+newadmin = "python3 manage.py createsuperuser"
+newapp = "python3 manage.py startapp"
+requirementes = "pipenv lock -r > requirements.txt"
+shell = "python3 manage.py shell"
+statics = "python3 manage.py collectstatics"
+start = "python3 manage.py runserver 127.0.0.1:8080"

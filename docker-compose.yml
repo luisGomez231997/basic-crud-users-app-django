@@ -1,0 +1,27 @@
+# create a set of services with docker-compose. 
+version: '3.8'
+services: 
+    # service 1: docker server image.
+    backend:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+            - 8000:8000
+        volumes: 
+            - .:/app
+        depends_on: 
+            - db
+    # service 2: database image. 
+    db:
+        image: mysql:5.7.22
+        restart: always
+        environment: 
+            MYSQL_DATABASE: admin
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - .dbdata:/var/lib/mysql
+        ports:
+             - 33066:3306
