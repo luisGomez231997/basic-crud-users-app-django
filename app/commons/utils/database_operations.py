@@ -1,8 +1,7 @@
 """Imports"""
 
-class DatabaseOperations(Object):
+class DatabaseOperations(object):
     """ """
-
     def __init__(self) -> None:
         super().__init__()
 
